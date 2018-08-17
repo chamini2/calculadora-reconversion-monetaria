@@ -1,26 +1,21 @@
-Calculator
----
-<img src="Logotype primary.png" width="60%" height="60%" />
-
-Created with *create-react-app*. See the [full create-react-app guide](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
-
-
-
-Try It
+Calculadora de reconversión monetaria
 ---
 
-[ahfarmer.github.io/calculator](https://ahfarmer.github.io/calculator/)
-
+Calculadora para la reconversión monetaria a Bolívares Soberanos.
 
 
 Install
 ---
 
-`npm install`
-
+`yarn`
 
 
 Usage
 ---
 
-`npm start`
+`yarn start`
+
+Credits
+---
+
+Based in https://github.com/ahfarmer/calculator/
