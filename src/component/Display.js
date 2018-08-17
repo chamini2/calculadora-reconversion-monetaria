@@ -7,6 +7,7 @@ class Display extends React.Component {
   render() {
     return (
       <div className="component-display">
+        <p>{this.props.message}</p>
         <div>{this.props.value}</div>
       </div>
     );
@@ -14,5 +15,6 @@ class Display extends React.Component {
 }
 Display.propTypes = {
   value: PropTypes.string,
+  message: PropTypes.string
 };
 export default Display;
