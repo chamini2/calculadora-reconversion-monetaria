@@ -1,6 +1,6 @@
 {
-  "short_name": "Calculator",
-  "name": "React Calculator Example App",
+  "short_name": "Reconversión monetaria",
+  "name": "Calculadora de reconversión monetaria",
   "icons": [
     {
       "src": "favicon.ico",
