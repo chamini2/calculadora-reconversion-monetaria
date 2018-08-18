@@ -19,13 +19,17 @@ class Display extends React.Component {
     return (
       <div className="component-display">
         <p>{this.props.message}</p>
-        <div>{thousandsSeparators(this.props.value)}</div>
+        <div>
+          {thousandsSeparators(this.props.value)}
+          <div className={this.props.cursor ? "cursor" : ""}></div>
+        </div>
       </div>
     );
   }
 }
 Display.propTypes = {
   value: PropTypes.string,
-  message: PropTypes.string
+  message: PropTypes.string,
+  cursor: PropTypes.bool
 };
 export default Display;

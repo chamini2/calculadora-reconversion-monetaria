@@ -9,12 +9,31 @@
   justify-content: space-between;
 }
 
-.component-display > div {
-  font-size: 2.5rem;
-  padding: 0.2rem 0.7rem 0.1rem 0.5rem;
-}
-
 .component-display > p {
   font-weight: bold;
   margin-left: 0.5rem;
+}
+
+.component-display > div {
+  font-size: 2.5rem;
+  padding: 0.2rem 0.7rem 0.1rem 0.5rem;
+  display: flex;
+  flex-direction: row;
+}
+
+@keyframes blink {
+  0% { background: rgba(255, 255, 255, 0.5); }
+  50% { background: rgba(255, 255, 255, 0); }
+  100% { background: rgba(255, 255, 255, 0.5); }
+}
+
+.component-display > div > div {
+  height: 80%;
+  width: 0.2ex;
+  margin: auto 0 auto 0.3ex;
+}
+
+.component-display > div > .cursor {
+  background-color: rgba(255, 255, 255, 1);
+  animation: blink 1s infinite;
 }

@@ -20,7 +20,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="component-app">
-        <Display message={this.state.way ? "Bs" : "BsS"} value={this.state.input || "0"} />
+        <Display message={this.state.way ? "Bs" : "BsS"} value={this.state.input || "0"} cursor />
         <Display message={this.state.way ? "BsS" : "Bs"} value={conversion(this.state.input, this.state.way ? 0.00001 : 100000)} />
         <ButtonPanel clickHandler={this.handleClick} />
       </div>
