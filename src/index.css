@@ -15,14 +15,8 @@ body {
   height: 100%;
 }
 
-body .github-fork-ribbon:before {
-  background-color: #333;
-}
-
-@media screen and (max-width: 400px) {
-  .github-fork-ribbon {
-    display: none;
-  }
+button {
+  touch-action: manipulation;
 }
 
 @media (min-width: 400px) and (min-height: 400px) {
