@@ -4,6 +4,10 @@ import PropTypes from "prop-types";
 
 import "./ButtonPanel.css";
 
+export const SWITCH_BUTTON = "⇅";
+export const CLEAR_BUTTON = "AC";
+export const BACKSPACE_BUTTON = "⌫";
+
 class ButtonPanel extends React.Component {
   handleClick = buttonName => {
     this.props.clickHandler(buttonName);
@@ -13,9 +17,9 @@ class ButtonPanel extends React.Component {
     return (
       <div className="component-button-panel">
         <div>
-          <Button name="CAMBIAR" clickHandler={this.handleClick} orange />
-          <Button name="LIMPIAR" clickHandler={this.handleClick} orange />
-          <Button name="BORRAR" clickHandler={this.handleClick} orange />
+          <Button name={SWITCH_BUTTON} clickHandler={this.handleClick} icon />
+          <Button name={CLEAR_BUTTON} clickHandler={this.handleClick} icon />
+          <Button name={BACKSPACE_BUTTON} clickHandler={this.handleClick} icon />
         </div>
         <div>
           <Button name="7" clickHandler={this.handleClick} />

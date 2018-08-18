@@ -1,5 +1,6 @@
 import Big from "big.js";
 
+import { BACKSPACE_BUTTON, CLEAR_BUTTON, SWITCH_BUTTON } from "../component/ButtonPanel";
 import isNumber from "./isNumber";
 
 /**
@@ -14,11 +15,11 @@ export function conversion(input, rate) {
  * Given a button name and a calculator state, return an updated state.
  */
 export function calculateNewState(state, buttonName) {
-  if (buttonName === "LIMPIAR") {
+  if (buttonName === CLEAR_BUTTON) {
     return { ...state, input: null };
   }
 
-  if (buttonName === "BORRAR") {
+  if (buttonName === BACKSPACE_BUTTON) {
     if (state.input) {
       if (state.input.length > 1) {
         return { ...state, input: state.input.substr(0, state.input.length - 1) };
@@ -27,7 +28,7 @@ export function calculateNewState(state, buttonName) {
     }
   }
 
-  if (buttonName === "CAMBIAR") {
+  if (buttonName === SWITCH_BUTTON) {
     return { ...state, way: !state.way }
   }
 

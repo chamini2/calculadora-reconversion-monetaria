@@ -10,8 +10,7 @@ class Button extends React.Component {
   render() {
     const className = [
       "component-button",
-      this.props.orange ? "orange" : "",
-      this.props.wide ? "wide" : "",
+      this.props.icon ? "icon" : ""
     ];
 
     return (
@@ -23,8 +22,7 @@ class Button extends React.Component {
 }
 Button.propTypes = {
   name: PropTypes.string,
-  orange: PropTypes.bool,
-  wide: PropTypes.bool,
+  icon: PropTypes.bool,
   clickHandler: PropTypes.func,
 };
 export default Button;

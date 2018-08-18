@@ -4,10 +4,6 @@
   flex: 1 0 auto;
 }
 
-.component-button.wide {
-  width: 50%;
-}
-
 .component-button button {
   background-color: #e0e0e0;
   border: 0;
@@ -21,7 +17,8 @@
   margin-right: 0;
 }
 
-.component-button.orange button {
+.component-button.icon button {
   background-color: #f5923e;
   color: white;
+  font-size: 2rem;
 }
