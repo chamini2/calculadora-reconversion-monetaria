@@ -9,9 +9,7 @@ export const CLEAR_BUTTON = "AC";
 export const BACKSPACE_BUTTON = "⌫";
 
 class ButtonPanel extends React.Component {
-  handleClick = buttonName => {
-    this.props.clickHandler(buttonName);
-  };
+  handleClick = this.props.clickHandler;
 
   render() {
     return (

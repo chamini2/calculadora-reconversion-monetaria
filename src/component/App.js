@@ -21,8 +21,8 @@ class App extends React.Component {
     return (
       <div className="component-app">
         <div className={"inputs " + (this.state.way ? "" : "reverse")}>
-          <Display message={this.state.way ? "Bs" : "BsS"} value={this.state.input || "0"} cursor />
-          <Display message={this.state.way ? "BsS" : "Bs"} value={conversion(this.state.input, wayToRate(this.state.way))} />
+          <Display clickHandler={this.handleClick} message={this.state.way ? "Bs" : "BsS"} value={this.state.input || "0"} cursor />
+          <Display clickHandler={this.handleClick} message={this.state.way ? "BsS" : "Bs"} value={conversion(this.state.input, wayToRate(this.state.way))} />
         </div>
         <ButtonPanel clickHandler={this.handleClick} />
       </div>

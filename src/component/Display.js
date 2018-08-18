@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import "./Display.css";
+import { SWITCH_BUTTON } from "./ButtonPanel";
 
 function thousandsSeparators(numberStr) {
   var x = numberStr.split('.');
@@ -15,9 +16,13 @@ function thousandsSeparators(numberStr) {
 }
 
 class Display extends React.Component {
+  handleClick = () => {
+    this.props.clickHandler(this.props.cursor ? "" : SWITCH_BUTTON)
+  };
+
   render() {
     return (
-      <div className="component-display">
+      <div onClick={this.handleClick} className="component-display">
         <p>{this.props.message}</p>
         <div>
           {thousandsSeparators(this.props.value)}
@@ -30,6 +35,7 @@ class Display extends React.Component {
 Display.propTypes = {
   value: PropTypes.string,
   message: PropTypes.string,
-  cursor: PropTypes.bool
+  cursor: PropTypes.bool,
+  clickHandler: PropTypes.func,
 };
 export default Display;
