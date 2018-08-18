@@ -11,6 +11,10 @@ export function conversion(input, rate) {
   return result.toString()
 }
 
+export function wayToRate(way) {
+  return way ? 0.00001 : 100000;
+}
+
 /**
  * Given a button name and a calculator state, return an updated state.
  */
@@ -29,7 +33,7 @@ export function calculateNewState(state, buttonName) {
   }
 
   if (buttonName === SWITCH_BUTTON) {
-    return { ...state, way: !state.way }
+    return { input: conversion(state.input, wayToRate(state.way)), way: !state.way }
   }
 
   if (isNumber(buttonName)) {
