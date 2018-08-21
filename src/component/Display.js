@@ -23,7 +23,7 @@ class Display extends React.Component {
   render() {
     return (
       <div onClick={this.handleClick} className="component-display">
-        <p>{this.props.message}</p>
+        <p>{this.props.message}{this.props.cursor ? " ›" : ""}</p>
         <div>
           {thousandsSeparators(this.props.value)}
           <div className={this.props.cursor ? "cursor" : ""}></div>

@@ -33,7 +33,7 @@
   margin: auto 0 auto 0.3ex;
 }
 
-.component-display > div > .cursor {
+.cursor {
   background-color: rgba(255, 255, 255, 1);
   animation: blink 1s infinite;
 }
