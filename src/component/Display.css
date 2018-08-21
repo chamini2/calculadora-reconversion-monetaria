@@ -1,39 +1,42 @@
 .component-display {
-  background-color: #858694;
-  color: white;
-  text-align: right;
-  font-weight: 200;
-  width: 100%;
-  flex-direction: row;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+
+  background-color: #292a30;
+  color: white;
+  font-weight: 200;
+  max-width: 100vw;
 }
 
-.component-display > p {
+.component-display .message {
+  margin: auto 5px;
+  font-size: 1.5rem;
   font-weight: bold;
-  margin-left: 0.5rem;
 }
 
-.component-display > div {
-  font-size: 2.5rem;
-  padding: 0.2rem 0.7rem 0.1rem 0.5rem;
-  display: flex;
-  flex-direction: row;
+.component-display .cursor {
+  margin: auto 0;
+  border: 0.5rem solid transparent;
+  border-left: 0.5rem solid white;
+  border-right: none;
+  opacity: 0;
 }
 
 @keyframes blink {
-  0% { background: rgba(255, 255, 255, 0.5); }
-  50% { background: rgba(255, 255, 255, 0); }
-  100% { background: rgba(255, 255, 255, 0.5); }
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-.component-display > div > div {
-  height: 80%;
-  width: 0.2ex;
-  margin: auto 0 auto 0.3ex;
-}
-
-.cursor {
-  background-color: rgba(255, 255, 255, 1);
+.component-display .cursor.active {
   animation: blink 1s infinite;
+}
+
+.component-display .value {
+  flex-grow: 1;
+  text-align: right;
+  margin: auto 5px;
+  font-size: 2rem;
+  overflow-x: auto;
 }

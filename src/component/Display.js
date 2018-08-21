@@ -23,11 +23,9 @@ class Display extends React.Component {
   render() {
     return (
       <div onClick={this.handleClick} className="component-display">
-        <p>{this.props.message}{this.props.cursor ? " ›" : ""}</p>
-        <div>
-          {thousandsSeparators(this.props.value)}
-          <div className={this.props.cursor ? "cursor" : ""}></div>
-        </div>
+        <div className="message">{this.props.message}</div>
+        <div className={"cursor " + (this.props.cursor ? "active" : "")}></div>
+        <div className="value">{thousandsSeparators(this.props.value)}</div>
       </div>
     );
   }
