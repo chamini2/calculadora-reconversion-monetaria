@@ -37,7 +37,8 @@ export function calculateNewState(state, buttonName) {
   }
 
   if (isNumber(buttonName)) {
-    if (buttonName === "0" && state.input === "0") {
+    if ((buttonName === "0" || buttonName === "000")
+        && (!state.input || state.input === "0")) {
       return { ...state, input: null };
     }
     if (!state.input || state.input === "0") {
