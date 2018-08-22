@@ -13,7 +13,8 @@
     "big.js": "^5.1.2",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "react-ga": "^2.5.3"
+    "react-ga": "^2.5.3",
+    "react-key-handler": "^1.2.0-beta.2"
   },
   "scripts": {
     "start": "react-scripts start",
