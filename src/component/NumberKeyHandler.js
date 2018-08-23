@@ -32,8 +32,8 @@ class NumberKeyHandler extends React.Component {
                 <KeyHandler keyEventName={KEYPRESS} keyValue="9" onKeyHandle={this.handleKey} />
                 <KeyHandler keyEventName={KEYPRESS} keyValue="." onKeyHandle={this.handleKey} />
                 <KeyHandler keyEventName={KEYPRESS} keyValue="," onKeyHandle={this.handleKey} />
-                <KeyHandler keyEventName={KEYPRESS} keyCode={8} onKeyHandle={this.handleKey} />
-                <KeyHandler keyEventName={KEYPRESS} keyCode={9} onKeyHandle={this.handleKey} />
+                <KeyHandler keyEventName={KEYPRESS} keyValue="Backspace" onKeyHandle={this.handleKey} />
+                <KeyHandler keyEventName={KEYPRESS} keyValue="Tab" onKeyHandle={this.handleKey} />
             </span>
         );
     }
