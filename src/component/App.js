@@ -20,13 +20,23 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="component-app">
-        <NumberKeyHandler keyHandler={this.handleClick} />
-        <div className={"inputs " + (this.state.way ? "" : "reverse")}>
-          <Display clickHandler={this.handleClick} message={this.state.way ? "Bs" : "BsS"} value={this.state.input || "0"} cursor />
-          <Display clickHandler={this.handleClick} message={this.state.way ? "BsS" : "Bs"} value={conversion(this.state.input, wayToRate(this.state.way))} />
+      <div>
+        <div className="component-app">
+          <NumberKeyHandler keyHandler={this.handleClick} />
+          <div className={"inputs " + (this.state.way ? "" : "reverse")}>
+            <Display clickHandler={this.handleClick} message={this.state.way ? "Bs" : "BsS"} value={this.state.input || "0"} cursor />
+            <Display clickHandler={this.handleClick} message={this.state.way ? "BsS" : "Bs"} value={conversion(this.state.input, wayToRate(this.state.way))} />
+          </div>
+          <ButtonPanel clickHandler={this.handleClick} />
         </div>
-        <ButtonPanel clickHandler={this.handleClick} />
+        <a
+          className="banner browser"
+          href="https://github.com/chamini2"
+          rel="noopener"
+          target="_blank"
+        >
+          Ver más de mi trabajo
+        </a>
       </div>
     );
   }
