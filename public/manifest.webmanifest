@@ -1,6 +1,8 @@
 {
-  "short_name": "Reconversión BsS",
-  "name": "Calculadora de reconversión monetaria",
+  "short_name": "Bs / BsS",
+  "name": "Calculadora de Bolívares",
+  "description": "Calculadora de reconversión a Bolívares Soberanos",
+  "lang": "es",
   "icons": [
     {
       "src": "favicon.ico",
@@ -9,7 +11,9 @@
     }
   ],
   "start_url": ".?utm_source=homescreen",
-  "display": "standalone",
+  "display": "fullscreen",
+  ​​"orientation": "portrait",
+  "scope": "/calculadora-reconversion-monetaria/",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#e0e0e0"
 }
