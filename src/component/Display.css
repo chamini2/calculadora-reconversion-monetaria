@@ -11,7 +11,7 @@
 
 .component-display .message {
   margin: auto 5px;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -37,6 +37,6 @@
   flex-grow: 1;
   text-align: right;
   margin: auto 5px;
-  font-size: 2rem;
+  font-size: 4rem;
   overflow-x: auto;
 }

@@ -29,14 +29,6 @@ class App extends React.Component {
           </div>
           <ButtonPanel clickHandler={this.handleClick} />
         </div>
-        <a
-          className="banner browser"
-          href="https://github.com/chamini2"
-          rel="noopener"
-          target="_blank"
-        >
-          Ver más de mi trabajo
-        </a>
       </div>
     );
   }
