@@ -20,12 +20,16 @@ class Display extends React.Component {
     this.props.clickHandler(this.props.cursor ? "" : SWITCH_BUTTON)
   };
 
+  componentDidUpdate() {
+    this.refs.value.scrollTo({ left: this.refs.value.scrollWidth, behavior: "auto" });
+  }
+
   render() {
     return (
       <div onClick={this.handleClick} className="component-display">
         <div className="message">{this.props.message}</div>
         <div className={"cursor " + (this.props.cursor ? "active" : "")}></div>
-        <div className="value">{thousandsSeparators(this.props.value)}</div>
+        <div ref="value" className="value">{thousandsSeparators(this.props.value)}</div>
       </div>
     );
   }
