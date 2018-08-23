@@ -11,8 +11,7 @@
     }
   ],
   "start_url": ".?utm_source=homescreen",
-  "display": "fullscreen",
-  ​​"orientation": "portrait",
+  "display": "standalone",
   "scope": "/calculadora-reconversion-monetaria/",
   "theme_color": "#000000",
   "background_color": "#e0e0e0"
