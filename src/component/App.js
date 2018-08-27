@@ -1,9 +1,10 @@
 import React from "react";
 import Display from "./Display";
 import ButtonPanel from "./ButtonPanel";
-import { calculateNewState, conversion, wayToRate } from "../logic/calculate";
 import "./App.css";
 import NumberKeyHandler from './NumberKeyHandler';
+import Menu from "./Menu";
+import { calculateNewState, conversion, wayToRate } from "../logic/calculate";
 
 class App extends React.Component {
   constructor(props) {
@@ -29,6 +30,7 @@ class App extends React.Component {
           </div>
           <ButtonPanel clickHandler={this.handleClick} />
         </div>
+        <Menu></Menu>
       </div>
     );
   }

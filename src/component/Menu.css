@@ -1,0 +1,38 @@
+.menu-toggle {
+  position: absolute;
+  bottom: 1vmin;
+  right: 0;
+
+  width: 8vmin;
+  height: 8vmin;
+  cursor: pointer;
+}
+
+.menu {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu > li {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid white;
+  color: white;
+}
+
+.menu > li:first-child {
+  border-top: none;
+}
+
+.menu > li > * {
+  padding: 15px;
+  color: white;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
