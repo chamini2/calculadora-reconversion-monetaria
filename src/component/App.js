@@ -20,8 +20,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className="component-app">
+      <div className="app">
+        <div className="calculator-app">
           <NumberKeyHandler keyHandler={this.handleClick} />
           <div className={"inputs " + (this.state.way ? "" : "reverse")}>
             <Display clickHandler={this.handleClick} message={this.state.way ? "Bs" : "BsS"} value={this.state.input || "0"} cursor />

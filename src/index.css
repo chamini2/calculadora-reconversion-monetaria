@@ -18,3 +18,7 @@ body {
 button {
   touch-action: manipulation;
 }
+
+a {
+  text-decoration: none;
+}

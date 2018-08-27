@@ -1,8 +1,12 @@
-.component-app {
+.app {
+  height: 100%;
+}
+
+.calculator-app {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 100vh;
+  height: 100%;
 }
 
 .inputs {
