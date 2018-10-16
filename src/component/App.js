@@ -3,7 +3,6 @@ import Display from "./Display";
 import ButtonPanel from "./ButtonPanel";
 import "./App.css";
 import NumberKeyHandler from './NumberKeyHandler';
-import Menu from "./Menu";
 import { calculateNewState, conversion, wayToRate } from "../logic/calculate";
 
 class App extends React.Component {
@@ -30,7 +29,7 @@ class App extends React.Component {
           </div>
           <ButtonPanel clickHandler={this.handleClick} />
         </div>
-        <Menu></Menu>
+        {/* <Menu></Menu> */}
       </div>
     );
   }
