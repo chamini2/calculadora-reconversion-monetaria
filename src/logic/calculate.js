@@ -8,7 +8,7 @@ import isNumber from "./isNumber";
  */
 export function conversion(input, rate) {
   const converted = Big(input || 0).mul(Big(rate));
-  const result = converted.round(2, 1)
+  const result = converted.round(6, 1)
   return result.toString()
 }
 
