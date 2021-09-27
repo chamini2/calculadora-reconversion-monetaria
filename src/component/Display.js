@@ -28,8 +28,8 @@ class Display extends React.Component {
     return (
       <div onClick={this.handleClick} className="component-display">
         <div className="message">{this.props.message}</div>
-        <div className={"cursor " + (this.props.cursor ? "active" : "")}></div>
-        <div ref="value" className="value">{thousandsSeparators(this.props.value)}</div>
+        <div className={"cursor" + (this.props.cursor ? " active" : "")}></div>
+        <div ref="value" className={"value" + (this.props.small ? " small" : "")}>{thousandsSeparators(this.props.value)}</div>
       </div>
     );
   }
@@ -38,6 +38,7 @@ Display.propTypes = {
   value: PropTypes.string,
   message: PropTypes.string,
   cursor: PropTypes.bool,
+  small: PropTypes.bool,
   clickHandler: PropTypes.func,
 };
 export default Display;

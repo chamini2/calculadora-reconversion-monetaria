@@ -24,8 +24,9 @@ class App extends React.Component {
         <div className="calculator-app">
           <NumberKeyHandler keyHandler={this.handleClick} />
           <div className={"inputs " + (this.state.way ? "" : "reverse")}>
-            <Display clickHandler={this.handleClick} message={this.state.way ? "Bs" : "BsS"} value={this.state.input || "0"} cursor />
-            <Display clickHandler={this.handleClick} message={this.state.way ? "BsS" : "Bs"} value={conversion(this.state.input, wayToRate(this.state.way))} />
+            {/* NOTE We always receive input in the first Display and just flip them and every calculation when "switching" inputs */}
+            <Display clickHandler={this.handleClick} message={this.state.way ? "BsD" : "BsS"} value={this.state.input || "0"} cursor small={!this.state.way} />
+            <Display clickHandler={this.handleClick} message={this.state.way ? "BsS" : "BsD"} value={conversion(this.state.input, wayToRate(this.state.way))} small={this.state.way} />
           </div>
           <ButtonPanel clickHandler={this.handleClick} />
         </div>

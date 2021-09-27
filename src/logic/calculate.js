@@ -7,13 +7,14 @@ import isNumber from "./isNumber";
  * Given an input and rate, return the conversion.
  */
 export function conversion(input, rate) {
-  const converted = Big(input || 0).mul(Big(rate || 1));
+  const converted = Big(input || 0).mul(Big(rate));
   const result = converted.round(2, 1)
   return result.toString()
 }
 
 export function wayToRate(way) {
-  return way ? 0.00001 : 100000;
+  let rate = 1000000;
+  return way ? rate : 1/rate;
 }
 
 /**
